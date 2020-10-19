@@ -141,9 +141,14 @@ private extension LayoutManager {
         }
         
         let borderColor = blockquoteBorderColors[index]
-        let borderRect = CGRect(origin: rect.origin, size: CGSize(width: blockquoteBorderWidth, height: rect.height))
+        let borderRect = CGRect(origin: CGPoint(x: rect.origin.x + 6, y: rect.origin.y - 1), size: CGSize(width: blockquoteBorderWidth, height: rect.height + 2))
         borderColor.setFill()
-        context.fill(borderRect)
+        
+        let path = UIBezierPath(roundedRect: borderRect, cornerRadius: 2)
+        
+        context.addPath(path.cgPath)
+        context.closePath()
+        context.fillPath()
     }
 
     /// Draws a single Blockquote Line Fragment, in the specified Rectangle, using a given Graphics Context.

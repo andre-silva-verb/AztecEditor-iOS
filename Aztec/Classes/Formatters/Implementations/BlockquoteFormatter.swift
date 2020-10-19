@@ -41,7 +41,8 @@ class BlockquoteFormatter: ParagraphAttributeFormatter {
 
         var resultingAttributes = attributes
         resultingAttributes[.paragraphStyle] = newParagraphStyle
-        
+        resultingAttributes[.foregroundColor] = UIColor(red: 135.0 / 255.0, green: 139.0 / 255.0, blue: 140.0 / 255.0, alpha: 1)
+
         return resultingAttributes
     }
 
@@ -58,7 +59,8 @@ class BlockquoteFormatter: ParagraphAttributeFormatter {
 
         var resultingAttributes = attributes
         resultingAttributes[.paragraphStyle] = newParagraphStyle
-                
+        resultingAttributes[.foregroundColor] = UIColor(red: 62.0 / 255.0, green: 63.0 / 255.0, blue: 65.0 / 255.0, alpha: 1)
+
         return resultingAttributes
     }
 
